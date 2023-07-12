@@ -1,0 +1,6 @@
+*.mp3
+*.ogg
+.env
+# exemple
+# /assets/img/monImageSecrete.jpg
+# /assets/MonDossierSecret/
