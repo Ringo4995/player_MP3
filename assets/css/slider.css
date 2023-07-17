@@ -1,0 +1,27 @@
+#slider img{
+    vertical-align: bottom;
+}
+
+.coucouvert{
+    width: 30%;
+}
+
+#slider{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#imageA, #texteA, #imageB, #texteB{
+    position: absolute; color: aliceblue;
+}
+#imageA, #imageB{
+    width: 100%;
+}
+
+.swipeLeft{
+    transform: translateX(-101%);
+}
+
+.trans{
+    transition: all 0.5s;
+}
