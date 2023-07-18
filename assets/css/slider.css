@@ -18,10 +18,26 @@
     width: 100%;
 }
 
+.trans{
+    transition: all 0.5s;
+}
+
 .swipeLeft{
     transform: translateX(-101%);
 }
 
-.trans{
-    transition: all 0.5s;
+.swipeRight{
+    transform: translateX(100%);
+}
+
+.swipeUp{
+    transform: translateY(-100%);
+}
+
+.swipeDown{
+    transform: translateY(100%);
+}
+
+.fadeOut{
+    opacity: 0;
 }

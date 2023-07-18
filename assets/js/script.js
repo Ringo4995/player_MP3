@@ -6,4 +6,4 @@ let currentTrack = 0;
 
 console.dir(playlist_une);
 console.log("Hello");
-initSlider(playlist_une, currentTrack);
+initSlider(playlist_une, currentTrack, false, "fadeOut");

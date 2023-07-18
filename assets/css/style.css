@@ -5,11 +5,12 @@
 
 .contenant{
     width: 80%;
-    height: 80vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     margin-left: 10%;
-    margin-top: 10vh;
+    margin-top: 5vh;
+    padding-top: 5vh;
     align-items: center;
     justify-content: center;
     background-color: #8b8bad;

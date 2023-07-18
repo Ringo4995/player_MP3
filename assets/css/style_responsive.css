@@ -6,6 +6,10 @@
         margin-top: 10%;
     }
     
+    .coucouvert{
+        width: 80%;
+    }
+
     .boutons{
         display: flex;
         flex-wrap: wrap;
