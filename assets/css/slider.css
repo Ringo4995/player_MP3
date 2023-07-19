@@ -1,43 +1,50 @@
-#slider img{
+#slider img {
     vertical-align: bottom;
 }
 
-.coucouvert{
+.coucouvert {
     width: 30%;
 }
 
-#slider{
+#slider {
     overflow: hidden;
     position: relative;
     width: 100%;
 }
-#imageA, #texteA, #imageB, #texteB{
-    position: absolute; color: aliceblue;
+
+#imageA,
+#texteA,
+#imageB,
+#texteB {
+    position: absolute;
+    color: aliceblue;
 }
-#imageA, #imageB{
+
+#imageA,
+#imageB {
     width: 100%;
 }
 
-.trans{
+.trans {
     transition: all 0.5s;
 }
 
-.swipeLeft{
+.swipeLeft {
     transform: translateX(-101%);
 }
 
-.swipeRight{
+.swipeRight {
     transform: translateX(100%);
 }
 
-.swipeUp{
+.swipeUp {
     transform: translateY(-100%);
 }
 
-.swipeDown{
+.swipeDown {
     transform: translateY(100%);
 }
 
-.fadeOut{
+.fadeOut {
     opacity: 0;
 }
