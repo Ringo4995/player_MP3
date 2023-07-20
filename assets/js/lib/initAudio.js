@@ -48,6 +48,7 @@ const initAudio = (playlist) => {
     const playPause = document.querySelector("#playPause");
     const next = document.querySelector("#next");
     const previous = document.querySelector("#previous");
+    const random = document.querySelector("#random");
     const volumeDown = document.querySelector("#volumeDown");
     const volumeUp = document.querySelector("#volumeUp");
     const time = document.querySelector("#time");
@@ -130,6 +131,10 @@ const initAudio = (playlist) => {
             audio.volume += 0.1;
         }
     })
+    //utilisation d'une fonction event raccourcie à la place du traditionel addEventListener ex : onclick, onkeyup, onscroll, etc.
+    random.onclick = ()=> {
+        console.log("click sur random");
+    }
     
     setTimeout(() => {
         //grace au return de ma fonction horloge je peux utiliser horloge comme une valeur
