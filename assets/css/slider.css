@@ -2,10 +2,6 @@
     vertical-align: bottom;
 }
 
-.coucouvert {
-    width: 30%;
-}
-
 #slider {
     overflow: hidden;
     position: relative;
@@ -17,7 +13,7 @@
 #imageB,
 #texteB {
     position: absolute;
-    color: aliceblue;
+    color: #ccccff;
 }
 
 #imageA,

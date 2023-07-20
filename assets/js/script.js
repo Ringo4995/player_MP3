@@ -7,9 +7,10 @@ import { initAudio } from "./lib/initAudio.js";
 //pour rendre globale une variable  ( partagée entre tout mes scripts)
 //j'utilise la déclaration globalThis
 globalThis.currentTrack = 0;
+globalThis.randomArray = [];
 
 
-console.dir(playlist_une);
-console.log("Hello");
+/* console.dir(playlist_une);
+console.log("Hello"); */
 initSlider(playlist_une, currentTrack, false, "fadeOut");
 initAudio(playlist_une);

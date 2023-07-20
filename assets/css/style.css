@@ -21,6 +21,10 @@
     width: 100%;
 }
 
+.coucouvert {
+    width: 30%;
+}
+
 .boutons {
     display: flex;
     flex-wrap: wrap;
@@ -47,4 +51,8 @@
     background-color: #ccccff;
     border: solid azure 2px;
     border-radius: 5px;
+}
+
+.shuffleCouleur{
+    color: #8b8bad;
 }

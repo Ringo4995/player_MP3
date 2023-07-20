@@ -1,10 +1,10 @@
 
 
 function initSlider(playlist, track, direction, effet) {
-    console.log("initialisation du Slider");
-    console.dir(playlist);
+    /* console.log("initialisation du Slider");
+    console.dir(playlist); */
     //ici je récupère l'image à afficher dans mon slider
-    console.dir(playlist[track].cover);
+    /* console.dir(playlist[track].cover); */
     const slider = document.getElementById("slider");
     let trackB = null; // "let trackB; marche aussi
     //la condition if vérifie si une opération est vrai ou faux
@@ -40,7 +40,7 @@ function initSlider(playlist, track, direction, effet) {
     //je veux connaître la taille de mon image mais je dois d'abord attendre que cette image soit uploadée par mon navigateur :
     //je dois temporiser avec javascript avant d'obtenir les informations demandées
     setTimeout(() => {
-        console.dir(imageA.clientHeight);
+        /* console.dir(imageA.clientHeight); */
         slider.style.height = imageA.clientHeight + "px";
     }, 500);
     // toutes les 5 secondes je souhaterais faire disparaître l'imageA et  le texteA pour faire apparaitre l'imageB et le texteB situés en dessous
