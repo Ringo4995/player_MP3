@@ -251,7 +251,7 @@ const initAudio = (playlist) => {
         setInterval(() => {
             /* console.log(horloge(Math.round(audio.currentTime))); */
             time.textContent = horloge(Math.round(audio.currentTime)) + " / " + horloge(audio.duration)
-        }, 1000)
+        }, 10)
     }, 500);
     //
 }
