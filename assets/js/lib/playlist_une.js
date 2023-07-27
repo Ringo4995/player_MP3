@@ -50,7 +50,7 @@ const playlist_une = [
         "cover": "./assets/img/cover/setting sun.jpg",
         "year": 2018,
         "audio": "./assets/audio/RED DEAD REDEMPTION 2 SONG - Setting Sun by Miracle Of Sound.mp3",
-        "genre": ['Country',' Rock', ' Jeu Vidéo'],
+        "genre": ['Country', ' Rock', ' Jeu Vidéo'],
         "description": "Musique inspirée par le jeu Red Dead Redemption 2 écrite et performée par Gavin Dunne, alias Miracle of Sound en 2018.",
     },
     {
@@ -68,7 +68,7 @@ const playlist_une = [
         "cover": "./assets/img/cover/artworks-nvVzXi3uddRl9N5v-JEeMLw-t500x500.jpg",
         "year": 2019,
         "audio": "./assets/audio/Attack on Titan OST - Before Lights Out『Erwins Charge Theme』.mp3",
-        "genre": ['Anime',' Symphonic'],
+        "genre": ['Anime', ' Symphonic'],
         "description": "SymphonicSuite[AoT]Part2-3rd:Before Lights Out est le douzième du premier volume de l'album Shingeki no Kyojin : Season 3 - Original Soundtrack. Il est composé et arrangé par Hiroyuki Sawano, comme l'intégralité de l'album. Les paroles sont chantées par Laco.",
     },
     {
@@ -84,12 +84,12 @@ const playlist_une = [
         "title": "The Secret Of Monkey Island Theme",
         "author": "Game Brass ft Discocactus",
         "cover": "./assets/img/cover/monkey.jpg",
-        "year": 1990,
+        "year": 2020,
         "audio": "./assets/audio/The Secret of Monkey Island Opening Theme (feat. DiscoCactus).mp3",
         "genre": ['Caribbean style music', ' Jeu Vidéo'],
         "description": "Thème musical du jeu Secret of Monkey Island",
     },
-    
+
 
 ]
 

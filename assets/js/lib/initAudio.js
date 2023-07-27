@@ -1,4 +1,5 @@
-const initAudio = (playlist) => {
+const initAudio = () => {
+    currentTrack === "init" ? currentTrack = 0 : ""
     //déclaration de fonction avec le mot clef function
     function nextCurrentTrack() {
         if (currentTrack < playlist.length - 1) {
@@ -46,13 +47,13 @@ const initAudio = (playlist) => {
     }
     // la fonction qui va gérer le retour dans mon tableau randomArray
     const previousRandomTrack = () => {
-        if(randomArray.length > 0){
-            if(currentTrack === randomArray[randomArray.length-1]){
-                currentTrack = randomArray[randomArray.length-2];
+        if (randomArray.length > 0) {
+            if (currentTrack === randomArray[randomArray.length - 1]) {
+                currentTrack = randomArray[randomArray.length - 2];
                 // supprimer cette entrée
-                randomArray.splice(randomArray.length-1,1);
+                randomArray.splice(randomArray.length - 1, 1);
             } else {
-                currentTrack = randomArray[randomArray.length-1];
+                currentTrack = randomArray[randomArray.length - 1];
             }
         } else {
             console.log("vide");
@@ -142,6 +143,7 @@ const initAudio = (playlist) => {
             //lecture ou pas ?
             //si lecture (isPlaying)
             if (audio.isPlaying) {
+
                 //-> audio.pause()
                 audio.isPlaying = false
                 audio.pause();
@@ -154,7 +156,9 @@ const initAudio = (playlist) => {
                 audio.isPlaying = true;
                 //-> gestion affichage bouton playPause
                 togglePlayButton()
+                userSliderAction("swipeLeft", true);
             } else {
+
                 //sinon 
                 //-> curretTrack++; sous condition de taille du tableau d'objet ( fonction en haut )
                 nextCurrentTrack();
@@ -166,6 +170,7 @@ const initAudio = (playlist) => {
                 audio.isPlaying = true;
                 //-> gestion affichage bouton playPause
                 togglePlayButton()
+                userSliderAction("swipeLeft", true);
             }
         }
 
@@ -196,12 +201,14 @@ const initAudio = (playlist) => {
                 audio.play();
                 audio.isPlaying = true;
                 togglePlayButton();
+                userSliderAction("swipeRight", false);
             } else {
                 previousCurrentTrack();
                 audio.src = playlist[currentTrack].audio;
                 audio.play();
                 audio.isPlaying = true;
                 togglePlayButton()
+                userSliderAction("swipeRight", false);
             }
         }
 

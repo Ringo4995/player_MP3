@@ -13,7 +13,16 @@
 #imageB,
 #texteB {
     position: absolute;
-    color: #ccccff;
+    color: #ff0000;
+    backdrop-filter: blur(3px);
+}
+
+#texteA,
+#texteB {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #imageA,

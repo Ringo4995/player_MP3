@@ -6,13 +6,15 @@ import { initAudio } from "./lib/initAudio.js";
 // let currentTrack = 0;
 //pour rendre globale une variable  ( partagée entre tout mes scripts)
 //j'utilise la déclaration globalThis
-globalThis.currentTrack = 0;
+globalThis.currentTrack = "init";
 globalThis.randomArray = [];
 globalThis.playlist = playlist_une;
 globalThis.trackB = null;
 globalThis.imageA = globalThis.imageB = globalThis.texteA = globalThis.texteB = null;
-globalThis.userSliderAction= userSliderAction;
+//dans le cas d'une fonction déclarée global
+//il ne faut surtout pas ajouter les () à l'instar de addEventListener
+globalThis.userSliderAction = userSliderAction;
 
 
 initSlider();
-initAudio(playlist_une);
+initAudio();

@@ -1,28 +1,29 @@
 function initSlider() {
+    currentTrack === "init" ? currentTrack = 0 : ""
     //ici je récupère l'image à afficher dans mon slider
     /* console.dir(playlist[currentTrack].cover); */
     const slider = document.getElementById("slider");
     //la condition if vérifie si une opération est vrai ou faux
-    const imageA = document.createElement("img");
+    imageA = document.createElement("img");
     imageA.id = "imageA";
     imageA.src = playlist[currentTrack].cover;
     imageA.alt = playlist[currentTrack].author;
     imageA.style.zIndex = "2";
     slider.append(imageA);
     // création d'une balise texte texteA
-    const texteA = document.createElement("p");
+    texteA = document.createElement("p");
     texteA.id = "texteA";
     texteA.style.zIndex = "3"
     texteA.innerHTML = "<p>" + playlist[currentTrack].title + "<p/><p>" + playlist[currentTrack].author + "<p/><p>" + playlist[currentTrack].year + "<p/><p>" + playlist[currentTrack].genre;
     //pour rajouter une class dans le texteA.innerhtml : class = 'blabla'
     slider.append(texteA);
-    const imageB = document.createElement("img");
+    imageB = document.createElement("img");
     imageB.id = "imageB";
     imageB.src = "";
     imageB.alt = "";
     imageB.style.zIndex = "0";
     slider.append(imageB);
-    const texteB = document.createElement("p");
+    texteB = document.createElement("p");
     texteB.id = "texteB";
     texteB.style.zIndex = "1";
     texteB.innerHTML = "";
@@ -37,16 +38,33 @@ function initSlider() {
 }
 
 // effet : swipeLeft swipeRight swipeUp swipeDown fadeOut : string
-    // direction : boolean true marche avant, false marche arrière
+// direction : boolean true marche avant, false marche arrière
 const userSliderAction = (effet, direction) => {
+
     //ajouter ma transition
 
     if (direction === true) {
-        trackB = currentTrack + 1;
+        if (currentTrack === playlist.length - 1) {
+            trackB = 0
+        } else {
+            trackB = currentTrack + 1;
+        }
     } else {
-        trackB = playlist.length - 1;
+        if (currentTrack === 0) {
+            trackB = playlist.length - 1;
+        } else {
+            trackB--;
+        }
     }
+    imageB.src = playlist[currentTrack].cover;
+    imageB.alt = playlist[currentTrack].title;
+    texteB.innerHTML = "<p>" + playlist[currentTrack].title + "<p/><p>" + playlist[currentTrack].author + "<p/><p>" + playlist[currentTrack].year + "<p/><p>" + playlist[currentTrack].genre;
 
+    console.log(
+        `currentTrack correspond à ${currentTrack}.
+        trackB correspond à ${trackB}.
+        `
+    );
     imageA.classList.add("trans");
     texteA.classList.add("trans");
     imageA.classList.add(effet);
@@ -55,7 +73,7 @@ const userSliderAction = (effet, direction) => {
 
     setTimeout(() => {
         //je commence pas intcrémenter currentTrack
-        if (direction) {
+        /* if (direction) {
             if (trackB === playlist.length - 1) {
                 trackB = 0
             } else {
@@ -77,7 +95,7 @@ const userSliderAction = (effet, direction) => {
             } else {
                 currentTrack--;
             }
-        };
+        }; */
 
         imageA.src = playlist[currentTrack].cover;
         imageA.alt = playlist[currentTrack].author;
